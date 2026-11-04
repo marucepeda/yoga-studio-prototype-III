@@ -1,6 +1,6 @@
 # Yoga Studio — Class Booking Management
 
-Proyecto II de Fundamentos de Product Engineering con IA · Código Facilito.
+Proyecto III de Fundamentos de Product Engineering con IA · Código Facilito.
 
 MVP funcional para la gestión de clases y reservas de un pequeño estudio de yoga.
 Incluye un dashboard operativo local para consultar clases, ocupación y actividad registrada.
