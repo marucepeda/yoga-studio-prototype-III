@@ -3,6 +3,7 @@
 Proyecto II de Fundamentos de Product Engineering con IA · Código Facilito.
 
 MVP funcional para la gestión de clases y reservas de un pequeño estudio de yoga.
+Incluye un dashboard operativo local para consultar clases, ocupación y actividad registrada.
 
 ## El problema
 
@@ -21,6 +22,7 @@ Este proyecto explora una solución digital para centralizar esas operaciones.
 - Roles simulados para administración, instructoras y alumnas.
 - Datos ficticios de demostración y reinicio del entorno.
 - Políticas configurables de cancelación y ausencia.
+- Dashboard de administración de solo lectura con indicadores de clases, capacidad, ocupación, listas de espera, resultados y movimientos recientes.
 
 ## Tecnología y alcance
 
@@ -39,6 +41,7 @@ La demo permite explorar y probar las reglas de negocio en un único navegador.
 - `index.html`: aplicación web y lógica del MVP.
 - `AGENTS.md`: contexto e instrucciones persistentes para el agente.
 - `specs/class-booking/spec.md`: especificación funcional y criterios de aceptación.
+- `specs/operations-dashboard/spec.md`: especificación del dashboard operativo y criterios de aceptación.
 - `.agents/skills/yoga-brand-design/SKILL.md`: lineamientos de identidad visual.
 
 ## Cómo probarlo

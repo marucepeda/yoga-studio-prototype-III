@@ -3251,6 +3251,51 @@ tr:last-child td { border-bottom: none; }
 @media(max-width:680px){#booking-app{border-radius:10px}.booking-header{padding:20px 16px;display:block}.booking-actions{margin-top:14px}.booking-body{padding:16px}.booking-toolbar{grid-template-columns:1fr;padding:12px}.booking-grid{grid-template-columns:1fr}.booking-credit-grid{gap:6px}.booking-credit{padding:9px}.booking-credit strong{font-size:19px}.booking-table{table-layout:fixed;font-size:11px}.booking-table th,.booking-table td{padding:7px 5px;overflow-wrap:anywhere}.booking-table td .booking-inline{align-items:flex-start;gap:4px}.booking-table button{white-space:normal}.booking-history .booking-table{display:block}.booking-history .booking-table thead{display:none}.booking-history .booking-table tbody{display:grid;gap:8px}.booking-history .booking-table tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:8px;border:1px solid var(--sand);border-radius:9px}.booking-history .booking-table td{min-width:0;padding:4px;border:0}.booking-history .booking-table td::before{display:block;color:#65685f;font-size:10px;font-weight:600}.booking-history .booking-table td:nth-child(1){grid-column:1/-1}.booking-history .booking-table td:nth-child(1)::before{content:"Alumna"}.booking-history .booking-table td:nth-child(2){grid-column:1/-1}.booking-history .booking-table td:nth-child(2)::before{content:"Movimiento"}.booking-history .booking-table td:nth-child(3){grid-column:1/-1}.booking-history .booking-table td:nth-child(3)::before{content:"Relacionado con"}.booking-history .booking-table td:nth-child(4)::before{content:"Créditos"}.booking-history .booking-table td:nth-child(5)::before{content:"Fecha y hora"}}
 </style>
 
+<style>
+.booking-view-nav{display:flex;gap:8px;margin-bottom:22px;border-bottom:1px solid var(--sand)}
+#booking-app .booking-view-nav button{min-height:42px;padding:8px 14px;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:#565950;font-weight:600}
+#booking-app .booking-view-nav button[aria-current=page]{border-bottom-color:var(--olive);color:var(--charcoal)}
+#booking-app .booking-view-nav button:focus-visible,#booking-app .booking-dashboard button:focus-visible,#booking-app .booking-dashboard select:focus-visible{outline:3px solid #727b6866;outline-offset:2px}
+.booking-dashboard{min-width:0}
+.booking-dashboard-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.booking-dashboard-heading h2{margin:0;color:var(--charcoal);font:500 clamp(23px,3vw,30px)/1.2 var(--font-serif,Georgia,serif)}
+.booking-dashboard-heading p{margin:5px 0 0;color:#62655e;font-size:14px}
+.booking-dashboard-controls{display:grid;grid-template-columns:minmax(210px,280px) minmax(210px,280px);gap:12px;padding:14px;margin-bottom:18px;border:1px solid var(--sand);border-radius:11px;background:#fff}
+.booking-dashboard-controls .booking-field{min-width:0}
+.booking-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.booking-kpi{min-width:0;padding:15px 16px;border:1px solid var(--sand);border-radius:11px;background:#fff}
+.booking-kpi span{display:block;color:#62655e;font-size:13px}
+.booking-kpi strong{display:block;margin-top:5px;color:var(--charcoal);font-size:27px;font-weight:600;line-height:1.15;overflow-wrap:anywhere}
+.booking-kpi small{display:block;margin-top:5px;color:#666960;font-size:12px}
+.booking-dashboard-summaries{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.booking-dashboard-summary{padding:12px 14px;border-left:3px solid var(--sage);background:#fff;font-size:13px}
+.booking-dashboard-summary strong{display:block;margin-bottom:2px;font-size:18px}
+.booking-dashboard-panel{margin-top:24px;padding:16px;border:1px solid var(--sand);border-radius:11px;background:#fff}
+.booking-dashboard-panel h3{margin:0 0 4px;color:var(--charcoal);font-size:17px}
+.booking-dashboard-panel>p{margin:0 0 12px;color:#62655e;font-size:13px}
+.booking-dashboard-class-list,.booking-dashboard-wait-list,.booking-dashboard-movements{display:grid;gap:9px}
+.booking-dashboard-class,.booking-dashboard-wait,.booking-dashboard-movement{min-width:0;padding:12px;border:1px solid #eee9df;border-radius:9px;background:#fff}
+.booking-dashboard-class{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;align-items:center}
+.booking-dashboard-class h4{margin:0;font-size:15px}
+.booking-dashboard-class p,.booking-dashboard-wait p,.booking-dashboard-movement p{margin:3px 0 0;color:#62655e;font-size:13px}
+.booking-dashboard-class-meta{display:flex;flex-wrap:wrap;gap:6px 12px;color:#565950;font-size:13px}
+.booking-dashboard-class .booking-dashboard-class-meta{grid-column:1/-1}
+.booking-dashboard-status{justify-self:end;padding:4px 8px;border-radius:20px;background:#e8ede4;color:#354332;font-size:12px;font-weight:600;text-align:center}
+.booking-dashboard-status.full,.booking-dashboard-status.waiting{background:#efede7;color:#4d5049}
+.booking-dashboard-empty{padding:14px;border:1px dashed var(--stone);border-radius:9px;color:#62655e;font-size:13px}
+.booking-dashboard-empty button{margin-left:8px}
+.booking-dashboard-wait{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}
+.booking-dashboard-wait strong,.booking-dashboard-movement strong{color:var(--charcoal)}
+.booking-dashboard-position{white-space:nowrap;color:#4d5049;font-size:12px;font-weight:600}
+.booking-dashboard-movement{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:start}
+.booking-dashboard-movement time{color:#62655e;font-size:12px;text-align:right}
+.booking-dashboard-movement p{grid-column:1/-1;overflow-wrap:anywhere}
+.booking-dashboard-demo-clock{margin:0 0 16px;padding:10px 12px;border:1px solid #b5a77e;border-radius:8px;background:#f7f4e9;color:#514a36;font-size:13px}
+.booking-dashboard-live{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:700px){.booking-dashboard-heading{display:block}.booking-dashboard-controls{grid-template-columns:minmax(0,1fr)}.booking-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.booking-kpi{padding:12px}.booking-kpi strong{font-size:23px}.booking-dashboard-summaries{grid-template-columns:1fr;gap:7px}.booking-dashboard-panel{padding:12px}.booking-dashboard-class{grid-template-columns:minmax(0,1fr)}.booking-dashboard-status{justify-self:start}.booking-dashboard-class .booking-dashboard-class-meta{grid-column:auto}.booking-dashboard-movement{grid-template-columns:minmax(0,1fr)}.booking-dashboard-movement time{text-align:left}.booking-dashboard-movement p{grid-column:auto}}
+@media(max-width:360px){.booking-kpis{grid-template-columns:1fr}.booking-view-nav{gap:0}.booking-view-nav button{flex:1;padding-inline:8px!important}}
+</style>
+
 <div class="widget">
 
 <section id="booking-app" aria-label="Yoga Studio local class booking demo">
@@ -3285,6 +3330,7 @@ tr:last-child td { border-bottom: none; }
         <small id="booking-clock-help">No cambia el reloj del dispositivo. Sin un valor, se usa la fecha y hora actuales.</small>
       </div>
     </div>
+    <p id="booking-dashboard-announcement" class="booking-dashboard-live" role="status" aria-live="polite"></p>
     <div id="booking-content"></div>
   </div>
 </section>
@@ -3770,6 +3816,9 @@ tr:last-child td { border-bottom: none; }
   let state = null;
   let loadError = "";
   let notice = null;
+  let activeView = "bookings";
+  let dashboardPeriod = "all";
+  let dashboardClassFilter = "all";
 
   function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -4265,6 +4314,186 @@ tr:last-child td { border-bottom: none; }
     return `<div class="booking-table-wrap"><table class="booking-table"><thead><tr><th>Alumna</th><th>Movimiento / operación</th><th>Relacionado con</th><th>Créditos</th><th>Fecha y hora</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
+  function dashboardPeriodBounds(source, period) {
+    const now = currentTime(source);
+    if (period === "today") {
+      const start = new Date(now);
+      start.setHours(0, 0, 0, 0);
+      const end = new Date(start);
+      end.setDate(end.getDate() + 1);
+      return { start, end, includeEnd: false };
+    }
+    if (period === "last7" || period === "last30") {
+      const hours = period === "last7" ? 168 : 720;
+      return { start: new Date(now.getTime() - hours * 60 * 60 * 1000), end: now, includeEnd: true };
+    }
+    if (period === "next7") {
+      return { start: now, end: new Date(now.getTime() + 168 * 60 * 60 * 1000), includeEnd: false };
+    }
+    return null;
+  }
+
+  function isInDashboardPeriod(value, bounds) {
+    if (!bounds) return true;
+    const time = new Date(value).getTime();
+    if (!Number.isFinite(time) || time < bounds.start.getTime()) return false;
+    return bounds.includeEnd ? time <= bounds.end.getTime() : time < bounds.end.getTime();
+  }
+
+  function dashboardViewNavigation(activeView) {
+    return `<nav class="booking-view-nav" aria-label="Vistas de administración">
+      <button type="button" data-view="dashboard" aria-current="${activeView === "dashboard" ? "page" : "false"}">Dashboard operativo</button>
+      <button type="button" data-view="bookings" aria-current="${activeView === "bookings" ? "page" : "false"}">Gestión de clases</button>
+    </nav>`;
+  }
+
+  function renderDashboard(source) {
+    const bounds = dashboardPeriodBounds(source, dashboardPeriod);
+    const allClasses = source.classes.map((item, index) => ({ item, index }))
+      .filter(({ item }) => isInDashboardPeriod(item.startsAt, bounds))
+      .sort((left, right) => new Date(left.item.startsAt) - new Date(right.item.startsAt) || left.index - right.index)
+      .map(({ item }) => item);
+    const statuses = allClasses.map((item) => ({ item, counts: classStatus(source, item) }));
+    const classCount = statuses.length;
+    const confirmedCount = statuses.reduce((total, entry) => total + entry.counts.confirmed, 0);
+    const totalCapacity = statuses.reduce((total, entry) => total + entry.item.capacity, 0);
+    const availablePlaces = statuses.reduce((total, entry) => total + entry.counts.available, 0);
+    const fullClasses = statuses.filter((entry) => entry.counts.available === 0).length;
+    const activeWaitlist = statuses.flatMap(({ item }) => source.waitlist
+      .filter((entry) => entry.classId === item.id && entry.status === "waiting")
+      .sort((left, right) => left.sequence - right.sequence)
+      .map((entry) => ({ item, entry })));
+    const occupancy = totalCapacity === 0
+      ? "—"
+      : `${(confirmedCount / totalCapacity * 100).toLocaleString("es-AR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
+    const outcomes = { cancelled: 0, attended: 0, absent: 0 };
+    source.reservations.forEach((reservation) => {
+      if (Object.prototype.hasOwnProperty.call(outcomes, reservation.status) &&
+          isInDashboardPeriod(reservation.updatedAt, bounds)) {
+        outcomes[reservation.status] += 1;
+      }
+    });
+    const recentMovements = source.movements.map((movement, index) => ({ movement, index }))
+      .filter(({ movement }) => isInDashboardPeriod(movement.createdAt, bounds))
+      .sort((left, right) => new Date(right.movement.createdAt) - new Date(left.movement.createdAt) ||
+        right.index - left.index)
+      .slice(0, 10)
+      .map(({ movement }) => movement);
+    const visibleClasses = statuses.filter(({ counts }) =>
+      dashboardClassFilter === "full" ? counts.available === 0 :
+        dashboardClassFilter === "waiting" ? counts.waiting > 0 : true);
+    const periodLabels = {
+      all: "todas las fechas",
+      today: "hoy",
+      last7: "los últimos 7 días",
+      last30: "los últimos 30 días",
+      next7: "los próximos 7 días"
+    };
+    const classRows = visibleClasses.length ? visibleClasses.map(({ item, counts }) => {
+      const instructor = person(item.instructorId);
+      const full = counts.available === 0;
+      const occupancyForClass = `${(counts.confirmed / item.capacity * 100).toLocaleString("es-AR", {
+        minimumFractionDigits: 1, maximumFractionDigits: 1
+      })}%`;
+      const statusText = full ? "Completa" : counts.waiting ? "Con lista de espera" : "Con lugares";
+      const statusClass = full ? "full" : counts.waiting ? "waiting" : "";
+      return `<article class="booking-dashboard-class">
+        <div><h4>${esc(item.name)}</h4><p>${esc(formattedDate(item.startsAt))} · ${esc(instructor ? instructor.name : "Sin instructora")}</p></div>
+        <span class="booking-dashboard-status ${statusClass}">${statusText}</span>
+        <div class="booking-dashboard-class-meta">
+          <span>${counts.confirmed}/${item.capacity} confirmadas</span>
+          <span>${counts.available} ${counts.available === 1 ? "lugar disponible" : "lugares disponibles"}</span>
+          <span>Ocupación ${occupancyForClass}</span>
+          <span>${counts.waiting} en espera</span>
+        </div>
+      </article>`;
+    }).join("") : `<div class="booking-dashboard-empty">${allClasses.length
+      ? "No hay clases que coincidan con este filtro."
+      : `No hay clases programadas para ${periodLabels[dashboardPeriod] || "el período seleccionado"}.`}
+      ${allClasses.length && dashboardClassFilter !== "all"
+        ? '<button type="button" data-reset-class-filter>Mostrar todas</button>' : ""}
+    </div>`;
+    const waitRows = activeWaitlist.length ? activeWaitlist.map(({ item, entry }) => {
+      const student = person(entry.studentId);
+      return `<article class="booking-dashboard-wait">
+        <div><strong>${esc(student ? student.name : "Estudiante")}</strong><p>${esc(item.name)} · ${esc(formattedDate(item.startsAt))}</p></div>
+        <span class="booking-dashboard-position">Posición ${waitingPosition(source, entry)}</span>
+      </article>`;
+    }).join("") : '<div class="booking-dashboard-empty">No hay personas en lista de espera para este período.</div>';
+    const movementLabels = {
+      grant: "Crédito otorgado",
+      reserve: "Crédito reservado",
+      release: "Crédito liberado",
+      consume: "Crédito consumido"
+    };
+    const movementRows = recentMovements.length ? recentMovements.map((movement) => {
+      const student = person(movement.studentId);
+      const item = classById(source, movement.classId);
+      return `<article class="booking-dashboard-movement">
+        <strong>${esc(student ? student.name : "Estudiante")} · ${esc(movementLabels[movement.type] || movement.type)}</strong>
+        <time datetime="${esc(movement.createdAt)}">${esc(formattedDate(movement.createdAt))}</time>
+        <p>${movement.amount} ${movement.amount === 1 ? "crédito" : "créditos"} · ${esc(movement.operation)} · ${esc(item ? item.name : "Crédito inicial / paquete")}</p>
+      </article>`;
+    }).join("") : '<div class="booking-dashboard-empty">No hay movimientos de créditos para este período.</div>';
+    const demoClockNotice = source.demoClock
+      ? `<p class="booking-dashboard-demo-clock" role="note">Reloj de demostración activo: ${esc(formattedDate(source.demoClock))}. Los filtros temporales se calculan respecto de esta hora de prueba.</p>`
+      : "";
+    const liveSummary = `${classCount} ${classCount === 1 ? "clase" : "clases"} para ${periodLabels[dashboardPeriod] || "el período seleccionado"}; ${activeWaitlist.length} en lista de espera.`;
+    const announcement = document.getElementById("booking-dashboard-announcement");
+    if (announcement) announcement.textContent = liveSummary;
+    return `${dashboardViewNavigation("dashboard")}
+      <main class="booking-dashboard" aria-labelledby="booking-dashboard-title">
+        ${demoClockNotice}
+        <div class="booking-dashboard-heading">
+          <div><h2 id="booking-dashboard-title">Dashboard operativo</h2><p>Una vista rápida de la agenda y la actividad del estudio.</p></div>
+        </div>
+        <div class="booking-dashboard-controls">
+          <div class="booking-field"><label for="dashboard-period">Período</label><select id="dashboard-period">
+            <option value="all" ${dashboardPeriod === "all" ? "selected" : ""}>Todas las fechas</option>
+            <option value="today" ${dashboardPeriod === "today" ? "selected" : ""}>Hoy</option>
+            <option value="last7" ${dashboardPeriod === "last7" ? "selected" : ""}>Últimos 7 días</option>
+            <option value="last30" ${dashboardPeriod === "last30" ? "selected" : ""}>Últimos 30 días</option>
+            <option value="next7" ${dashboardPeriod === "next7" ? "selected" : ""}>Próximos 7 días</option>
+          </select></div>
+          <div class="booking-field"><label for="dashboard-class-filter">Filtrar clases</label><select id="dashboard-class-filter">
+            <option value="all" ${dashboardClassFilter === "all" ? "selected" : ""}>Todas</option>
+            <option value="full" ${dashboardClassFilter === "full" ? "selected" : ""}>Completas</option>
+            <option value="waiting" ${dashboardClassFilter === "waiting" ? "selected" : ""}>Con lista de espera</option>
+          </select></div>
+        </div>
+        <section aria-label="Indicadores operativos">
+          <div class="booking-kpis">
+            <article class="booking-kpi"><span>Clases programadas</span><strong>${classCount}</strong><small>Según fecha de inicio</small></article>
+            <article class="booking-kpi"><span>Reservas confirmadas</span><strong>${confirmedCount}</strong><small>En las clases del período</small></article>
+            <article class="booking-kpi"><span>Ocupación</span><strong>${occupancy}</strong><small>${confirmedCount} de ${totalCapacity} lugares</small></article>
+            <article class="booking-kpi"><span>Capacidad total</span><strong>${totalCapacity}</strong><small>Sumada para el período</small></article>
+            <article class="booking-kpi"><span>Lugares disponibles</span><strong>${availablePlaces}</strong><small>Espera excluida del cálculo</small></article>
+            <article class="booking-kpi"><span>Clases completas</span><strong>${fullClasses}</strong><small>Sin lugares disponibles</small></article>
+          </div>
+        </section>
+        <section class="booking-dashboard-summaries" aria-label="Resultados registrados en ${esc(periodLabels[dashboardPeriod] || "el período seleccionado")}">
+          <div class="booking-dashboard-summary"><strong>${activeWaitlist.length}</strong>personas en lista de espera</div>
+          <div class="booking-dashboard-summary"><strong>${outcomes.cancelled}</strong>cancelaciones registradas</div>
+          <div class="booking-dashboard-summary"><strong>${outcomes.attended}</strong>asistencias · ${outcomes.absent} ausencias registradas</div>
+        </section>
+        <section class="booking-dashboard-panel" aria-labelledby="dashboard-classes-title">
+          <h3 id="dashboard-classes-title">Clases del período</h3>
+          <p>Ocupación y disponibilidad calculadas con las reservas confirmadas.</p>
+          <div class="booking-dashboard-class-list">${classRows}</div>
+        </section>
+        <section class="booking-dashboard-panel" aria-labelledby="dashboard-waitlist-title">
+          <h3 id="dashboard-waitlist-title">Listas de espera · ${activeWaitlist.length}</h3>
+          <p>Orden FIFO por clase. Las personas en espera no ocupan lugar ni consumen créditos.</p>
+          <div class="booking-dashboard-wait-list">${waitRows}</div>
+        </section>
+        <section class="booking-dashboard-panel" aria-labelledby="dashboard-movements-title">
+          <h3 id="dashboard-movements-title">Movimientos recientes</h3>
+          <p>Hasta 10 movimientos del ledger para ${esc(periodLabels[dashboardPeriod] || "el período seleccionado")}.</p>
+          <div class="booking-dashboard-movements">${movementRows}</div>
+        </section>
+      </main>`;
+  }
+
   function renderAdmin(source) {
     const instructors = people.filter((item) => item.role === "instructor")
       .map((item) => `<option value="${esc(item.id)}">${esc(item.name)}</option>`).join("");
@@ -4304,6 +4533,8 @@ tr:last-child td { border-bottom: none; }
   function render() {
     const roleLabel = document.getElementById("booking-role-label");
     const resetButton = document.getElementById("booking-reset");
+    const dashboardAnnouncement = document.getElementById("booking-dashboard-announcement");
+    if (dashboardAnnouncement) dashboardAnnouncement.textContent = "";
     storageError.hidden = !loadError;
     storageError.textContent = loadError;
     feedback.hidden = !notice;
@@ -4318,15 +4549,21 @@ tr:last-child td { border-bottom: none; }
       return;
     }
     const activePerson = person(state.personaId);
+    if (activePerson.role !== "admin") activeView = "bookings";
     roleLabel.textContent = `${humanRole(activePerson.role)} · perfil simulado`;
     personaSelect.innerHTML = people.map((item) =>
       `<option value="${esc(item.id)}" ${item.id === state.personaId ? "selected" : ""}>${esc(item.label)}</option>`).join("");
     clockInput.value = state.demoClock || "";
+    if (activePerson.role === "admin" && activeView === "dashboard") {
+      content.innerHTML = renderDashboard(state);
+      return;
+    }
     const classes = state.classes.slice().sort((left, right) =>
       new Date(left.startsAt) - new Date(right.startsAt));
     const student = activePerson.role === "student" ? activePerson : null;
     const creditSummary = student ? balancesFor(state, student.id) : null;
     const sections = [];
+    if (activePerson.role === "admin") sections.push(dashboardViewNavigation("bookings"));
     if (creditSummary) {
       sections.push(`<section class="booking-section"><h2>Tu paquete de clases</h2><div class="booking-credit-grid">
         <div class="booking-credit"><span>Disponibles</span><strong>${creditSummary.available}</strong></div>
@@ -4419,6 +4656,19 @@ tr:last-child td { border-bottom: none; }
     });
   });
 
+  content.addEventListener("change", (event) => {
+    const control = event.target;
+    if (control.id === "dashboard-period") {
+      dashboardPeriod = control.value;
+      render();
+      content.querySelector("#dashboard-period")?.focus();
+    } else if (control.id === "dashboard-class-filter") {
+      dashboardClassFilter = control.value;
+      render();
+      content.querySelector("#dashboard-class-filter")?.focus();
+    }
+  });
+
   content.addEventListener("submit", (event) => {
     event.preventDefault();
     const form = event.target;
@@ -4462,6 +4712,19 @@ tr:last-child td { border-bottom: none; }
   });
 
   content.addEventListener("click", (event) => {
+    const viewButton = event.target.closest("[data-view]");
+    if (viewButton && state && person(state.personaId).role === "admin") {
+      activeView = viewButton.dataset.view === "dashboard" ? "dashboard" : "bookings";
+      render();
+      content.querySelector(`[data-view="${activeView}"]`)?.focus();
+      return;
+    }
+    if (event.target.closest("[data-reset-class-filter]")) {
+      dashboardClassFilter = "all";
+      render();
+      content.querySelector("#dashboard-class-filter")?.focus();
+      return;
+    }
     const button = event.target.closest("[data-action]");
     if (!button) return;
     const { action, class: classId, reservation: reservationId, wait: waitId } = button.dataset;
