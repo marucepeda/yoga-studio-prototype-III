@@ -144,3 +144,19 @@ When working on this project:
 - Prefer small, verifiable implementation steps.
 
 The objective is a reliable and understandable product, not the largest possible codebase.
+
+## 10. Mandatory Visual Design Compliance
+
+The `yoga-brand-design` skill is the single source of truth for the application's visual identity.
+
+Before creating or modifying any UI:
+
+1. Read `.agents/skills/yoga-brand-design/SKILL.md` in full.
+2. Review the existing interface and identify deviations from the defined visual identity.
+3. Preserve the established warm, minimalist, zen-inspired editorial direction.
+4. Do not introduce generic SaaS dashboard patterns, template-based layouts, unrelated design systems, or visual conventions inherited from AI-generated scaffolding.
+5. Do not replace the established design with a new visual concept unless explicitly authorized.
+
+After implementation, validate the actual rendered interface against the skill's Design Validation Checklist.
+
+A feature is not visually complete merely because it works or meets its functional acceptance criteria. Visual consistency, usability and compliance with the brand identity are also required.
