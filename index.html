@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-saved=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yoga Studio · Clases y reservas</title><link id="icon-font" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.42.0/dist/tabler-icons.min.css" media="print" onload="this.media='all'"><noscript><link id="icon-font" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.42.0/dist/tabler-icons.min.css"></noscript><style>
+<html data-saved=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yoga Studio · Clases y reservas</title><style>
 :root{--font-anthropic-sans:"anthropic-sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;--font-anthropic-serif:"anthropic-serif", ui-serif, Georgia, "Times New Roman", serif}
 :root {
   --radius: calc(0.5rem * var(--cds-rem-scale, 1));
@@ -2903,7 +2903,41 @@ body[data-not-sent] > #vis-container ~ #not-sent {
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }</style><style>body { padding: 16px; background: var(--surface-1); }
-#vis-container { overflow: visible; }</style></head><body><svg style="position:absolute;width:0;height:0" aria-hidden="true">
+#vis-container { overflow: visible; }</style><style id="warm-home">
+:root{--arena:#E8E1D5;--piedra:#D6CEC0;--salvia:#A5AD9B;--oliva:#727B68;--oliva-d:#5E6853;--carbon:#343632;--lino:#F7F6F2;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--font-serif:var(--serif)}
+body{padding:0!important;background:var(--lino)!important}
+#booking-app{max-width:860px;margin:0 auto;border:0;border-radius:0;background:transparent;font-size:16px;line-height:1.55}
+#booking-app .booking-header{background:transparent;border:0;padding:28px 24px 0}
+.wordmark{margin:0;font:500 20px/1 var(--serif);letter-spacing:.02em;color:var(--oliva-d)}
+#booking-app .booking-body{padding:12px 24px 56px}
+.home{margin:20px 0 8px;padding:40px 36px 36px;background:var(--oliva-d);color:var(--arena);border-radius:72px 18px 72px 18px}
+.home h2{margin:0 0 14px;font:500 clamp(32px,6vw,50px)/1.08 var(--serif);color:#F7F6F2}
+.home-next{margin:0;max-width:34em;font-size:18px;color:var(--arena)}
+.home-credits{margin:20px 0 0;padding-top:16px;border-top:1px solid #ffffff33;font-size:15px;color:var(--arena)}
+.home-credits strong{font:500 30px/1 var(--serif);margin-right:4px;color:#F7F6F2}
+.booking-section{margin-top:44px}
+.booking-section h2{font:500 28px/1.2 var(--serif)}
+.booking-section p.section-intro{display:none}
+.booking-grid{display:block}
+.booking-card{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:20px 0;border:0;border-bottom:1px solid var(--piedra);border-radius:0;background:transparent}
+.booking-card h3{font:500 23px/1.2 var(--serif)}
+.booking-card .meta{margin:0;color:#4d5049;font-size:15px}
+.booking-card>.booking-inline{margin-top:6px}
+.booking-card>.booking-inline:nth-child(4){grid-column:2;grid-row:1/4;align-self:center;margin:0}
+.booking-status{background:var(--arena);color:var(--carbon);font-weight:500}
+#booking-app .booking-body button.primary:not(:disabled){background:var(--oliva-d);border-color:var(--oliva-d);border-radius:999px;padding:10px 20px}
+#booking-app .booking-body button:not(:disabled){border-radius:999px}
+.booking-panel,.booking-table-wrap,.booking-dashboard-panel,.booking-kpi{border-radius:18px}
+.booking-lab{margin:28px 0 0;padding:10px 16px;border:1px dashed var(--salvia);border-radius:14px;color:#4d5049;font-size:14px}
+.booking-lab>summary{cursor:pointer;font-weight:600;color:var(--oliva-d)}
+.booking-lab-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.booking-lab .booking-toolbar{margin-bottom:8px;border-radius:12px}
+@media(max-width:640px){
+#booking-app .booking-body{padding:8px 16px 48px}.home{padding:32px 24px;border-radius:48px 14px 48px 14px}
+.booking-card{grid-template-columns:1fr}.booking-card>.booking-inline:nth-child(4){grid-column:1;grid-row:auto;margin-top:10px}
+#booking-app .booking-body button{min-height:46px}}
+</style></head><body><svg style="position:absolute;width:0;height:0" aria-hidden="true">
     <defs>
       <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3299,22 +3333,11 @@ tr:last-child td { border-bottom: none; }
 <div class="widget">
 
 <section id="booking-app" aria-label="Yoga Studio local class booking demo">
-  <header class="booking-header">
-    <div>
-      <p class="booking-eyebrow">Yoga Studio · Demo local</p>
-      <h1>Clases y reservas</h1>
-      <p class="booking-subtitle">Un espacio claro para reservar, acompañar y llevar el registro de cada clase.</p>
-    </div>
-    <div class="booking-actions">
-      <span class="booking-role-badge" id="booking-role-label">Demo local</span>
-      <button class="booking-reset" id="booking-reset" type="button">Restablecer datos de prueba</button>
-    </div>
-  </header>
+  <header class="booking-header"><p class="wordmark">Yoga Studio</p></header>
   <div class="booking-body">
-    <div class="booking-note"><strong>Demostración académica:</strong> los perfiles son roles simulados, no hay autenticación. Los datos viven en este navegador; no se sincronizan entre dispositivos ni admiten reservas concurrentes.</div>
     <div id="booking-feedback" class="booking-feedback" role="status" aria-live="polite" hidden></div>
     <div id="booking-storage-error" class="booking-feedback" data-kind="error" role="alert" hidden></div>
-    <div class="booking-toolbar">
+    <details class="booking-lab"><summary>Herramientas de prueba</summary><p class="booking-help">Prototipo local: los perfiles son simulados, no hay cuentas ni sincronización entre dispositivos, y los datos viven solo en este navegador.</p><div class="booking-lab-actions"><span class="booking-role-badge" id="booking-role-label">Demo local</span><button class="booking-reset" id="booking-reset" type="button">Restablecer datos de prueba</button></div><div class="booking-toolbar">
       <div class="booking-field">
         <label for="booking-persona">Perfil de demostración</label>
         <select id="booking-persona"></select>
@@ -3330,472 +3353,23 @@ tr:last-child td { border-bottom: none; }
         <small id="booking-clock-help">No cambia el reloj del dispositivo. Sin un valor, se usa la fecha y hora actuales.</small>
       </div>
     </div>
-    <p id="booking-dashboard-announcement" class="booking-dashboard-live" role="status" aria-live="polite"></p>
+    </details><p id="booking-dashboard-announcement" class="booking-dashboard-live" role="status" aria-live="polite"></p>
     <div id="booking-content"></div>
   </div>
 </section>
 
-<details class="prototype-reference">
-<summary>Prototipo visual original (referencia de diseño)</summary>
-<div class="nav-tabs">
-  <button class="nav-tab active" onclick="showScreen('inicio', this)">Inicio — Andrea</button>
-  <button class="nav-tab" onclick="showScreen('agenda', this)">Agenda</button>
-  <button class="nav-tab" onclick="showScreen('cancelacion', this)">Cancelar clase</button>
-  <button class="nav-tab" onclick="showScreen('alumna', this)">Vista alumna</button>
-  <button class="nav-tab" onclick="showScreen('paquete', this)">Mi paquete</button>
-</div>
 
-<!-- SCREEN: INICIO ANDREA -->
-<div class="screen active" id="screen-inicio">
-  <div class="device-desktop">
-    <div class="app-layout">
-      <div class="sidebar">
-        <div class="sidebar-logo">Estudio</div>
-        <div class="sidebar-nav">
-          <div class="nav-item active"><i class="ti ti-home" aria-hidden="true"></i> Inicio</div>
-          <div class="nav-item"><i class="ti ti-calendar" aria-hidden="true"></i> Agenda</div>
-          <div class="nav-item"><i class="ti ti-users" aria-hidden="true"></i> Alumnas</div>
-          <div class="nav-item"><i class="ti ti-package" aria-hidden="true"></i> Paquetes</div>
-          <div class="nav-item"><i class="ti ti-bell" aria-hidden="true"></i> Avisos</div>
-          <div class="nav-item"><i class="ti ti-settings" aria-hidden="true"></i> Config.</div>
-        </div>
-        <div class="sidebar-role" style="margin-top:16px; padding-top:12px; border-top: 0.5px solid var(--sand)">
-          <strong>Andrea</strong>
-          Administradora
-        </div>
-      </div>
-      <div class="main">
-        <div class="page-title">Buenos días</div>
-        <div class="page-sub">Miércoles 5 de marzo · 3 clases hoy</div>
-
-        <div class="metrics">
-          <div class="metric-card">
-            <div class="metric-label">Clases hoy</div>
-            <div class="metric-value">3</div>
-            <div class="metric-sub">1 completa</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Inscriptas hoy</div>
-            <div class="metric-value">28</div>
-            <div class="metric-sub">de 36 cupos</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Listas de espera</div>
-            <div class="metric-value">1</div>
-            <div class="metric-sub">Flow 18:30 · 3 esperando</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Avisos pendientes</div>
-            <div class="metric-value">0</div>
-            <div class="metric-sub">Todo al día</div>
-          </div>
-        </div>
-
-        <div class="text-label">Clases de hoy</div>
-        <div class="class-list">
-          <div class="class-card">
-            <div class="class-time">09:00</div>
-            <div class="class-info">
-              <div class="class-name">Hatha Flow</div>
-              <div class="class-instructor">Laura · sala principal</div>
-            </div>
-            <span class="chip chip-active">8/12</span>
-          </div>
-          <div class="class-card">
-            <div class="class-time">12:00</div>
-            <div class="class-info">
-              <div class="class-name">Restaurativa</div>
-              <div class="class-instructor">Sofía · sala principal</div>
-            </div>
-            <span class="chip chip-active">8/10</span>
-          </div>
-          <div class="class-card">
-            <div class="class-time">18:30</div>
-            <div class="class-info">
-              <div class="class-name">Vinyasa Flow</div>
-              <div class="class-instructor">Laura · sala principal</div>
-            </div>
-            <div style="display:flex; gap:5px; align-items:center">
-              <span class="chip chip-confirmed" style="background:#ebe8f0;color:#6a5080">12/12</span>
-              <span class="chip chip-waiting" style="font-size:9px;background:#ebe8f0;color:#6a5080">+3 espera</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SCREEN: AGENDA -->
-<div class="screen" id="screen-agenda">
-  <div class="device-desktop">
-    <div class="app-layout">
-      <div class="sidebar">
-        <div class="sidebar-logo">Estudio</div>
-        <div class="sidebar-nav">
-          <div class="nav-item"><i class="ti ti-home" aria-hidden="true"></i> Inicio</div>
-          <div class="nav-item active"><i class="ti ti-calendar" aria-hidden="true"></i> Agenda</div>
-          <div class="nav-item"><i class="ti ti-users" aria-hidden="true"></i> Alumnas</div>
-          <div class="nav-item"><i class="ti ti-package" aria-hidden="true"></i> Paquetes</div>
-          <div class="nav-item"><i class="ti ti-bell" aria-hidden="true"></i> Avisos</div>
-          <div class="nav-item"><i class="ti ti-settings" aria-hidden="true"></i> Config.</div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="page-title">Agenda semanal</div>
-        <div class="page-sub">3 — 7 de marzo · <span style="color:var(--olive)">12 clases programadas</span></div>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Día y hora</th>
-                <th>Clase</th>
-                <th>Instructora</th>
-                <th>Inscriptas</th>
-                <th>Estado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="color:var(--text-m)">Lun 09:00</td>
-                <td style="font-weight:500">Hatha Flow</td>
-                <td>Laura</td>
-                <td>
-                  <div class="pkg-bar-wrap" style="min-width:80px">
-                    <div class="pkg-bar-bg"><div class="pkg-bar-fill" style="width:67%"></div></div>
-                    <div class="pkg-numbers"><span>8 de 12</span><span>4 libres</span></div>
-                  </div>
-                </td>
-                <td><span class="chip chip-active">Programada</span></td>
-              </tr>
-              <tr>
-                <td style="color:var(--text-m)">Lun 18:30</td>
-                <td style="font-weight:500">Vinyasa Flow</td>
-                <td>Laura</td>
-                <td>
-                  <div class="pkg-bar-wrap" style="min-width:80px">
-                    <div class="pkg-bar-bg"><div class="pkg-bar-fill" style="width:100%;background:#c06040"></div></div>
-                    <div class="pkg-numbers"><span>12 de 12</span><span style="color:#8a5040">3 en espera</span></div>
-                  </div>
-                </td>
-                <td><span class="chip" style="background:#f0eae8;color:#8a5040">Completa</span></td>
-              </tr>
-              <tr>
-                <td style="color:var(--text-m)">Mar 09:00</td>
-                <td style="font-weight:500">Restaurativa</td>
-                <td>Sofía</td>
-                <td>
-                  <div class="pkg-bar-wrap" style="min-width:80px">
-                    <div class="pkg-bar-bg"><div class="pkg-bar-fill" style="width:50%"></div></div>
-                    <div class="pkg-numbers"><span>5 de 10</span><span>5 libres</span></div>
-                  </div>
-                </td>
-                <td><span class="chip chip-active">Programada</span></td>
-              </tr>
-              <tr>
-                <td style="color:var(--text-m)">Mié 12:00</td>
-                <td style="font-weight:500">Yin Yoga</td>
-                <td>Sofía</td>
-                <td>
-                  <div class="pkg-bar-wrap" style="min-width:80px">
-                    <div class="pkg-bar-bg"><div class="pkg-bar-fill" style="width:0%"></div></div>
-                    <div class="pkg-numbers"><span>0 de 10</span><span>10 libres</span></div>
-                  </div>
-                </td>
-                <td><span class="chip chip-inactive">Cancelada</span></td>
-              </tr>
-              <tr>
-                <td style="color:var(--text-m)">Jue 18:30</td>
-                <td style="font-weight:500">Vinyasa Flow</td>
-                <td>Laura</td>
-                <td>
-                  <div class="pkg-bar-wrap" style="min-width:80px">
-                    <div class="pkg-bar-bg"><div class="pkg-bar-fill" style="width:92%"></div></div>
-                    <div class="pkg-numbers"><span>11 de 12</span><span>1 libre</span></div>
-                  </div>
-                </td>
-                <td><span class="chip chip-low">Casi llena</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SCREEN: CANCELACION -->
-<div class="screen" id="screen-cancelacion">
-  <div class="device-desktop">
-    <div class="app-layout">
-      <div class="sidebar">
-        <div class="sidebar-logo">Estudio</div>
-        <div class="sidebar-nav">
-          <div class="nav-item"><i class="ti ti-home" aria-hidden="true"></i> Inicio</div>
-          <div class="nav-item active"><i class="ti ti-calendar" aria-hidden="true"></i> Agenda</div>
-          <div class="nav-item"><i class="ti ti-users" aria-hidden="true"></i> Alumnas</div>
-          <div class="nav-item"><i class="ti ti-package" aria-hidden="true"></i> Paquetes</div>
-          <div class="nav-item active"><i class="ti ti-bell" aria-hidden="true"></i> Avisos</div>
-          <div class="nav-item"><i class="ti ti-settings" aria-hidden="true"></i> Config.</div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="page-title">Cancelar clase</div>
-        <div class="page-sub">Vinyasa Flow · Lunes 18:30 · Laura</div>
-
-        <div class="alert-banner">
-          <i class="ti ti-alert-triangle" aria-hidden="true"></i>
-          Esta clase tiene 12 inscriptas y 3 en lista de espera. Se notificará a todas.
-        </div>
-
-        <div class="cancel-flow">
-          <div class="cancel-title">Alumnas inscriptas afectadas</div>
-          <div class="cancel-sub">12 alumnas recibirán aviso de cancelación</div>
-          <div class="affected-list">
-            <div class="affected-row">
-              <div>
-                <div class="affected-name">María González</div>
-                <div class="affected-phone">+54 11 2345-6789</div>
-              </div>
-              <button class="wa-btn">
-                <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
-                WhatsApp
-              </button>
-            </div>
-            <div class="affected-row">
-              <div>
-                <div class="affected-name">Ana Rodríguez</div>
-                <div class="affected-phone">+54 11 3456-7890</div>
-              </div>
-              <button class="wa-btn">
-                <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
-                WhatsApp
-              </button>
-            </div>
-            <div class="affected-row">
-              <div>
-                <div class="affected-name">Paula Martínez</div>
-                <div class="affected-phone">+54 11 4567-8901</div>
-              </div>
-              <button class="wa-btn">
-                <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
-                WhatsApp
-              </button>
-            </div>
-            <div style="text-align:center; padding: 6px; font-size:10px; color:var(--text-m)">
-              + 9 alumnas más · <span style="color:var(--olive); cursor:pointer">Ver todas</span>
-            </div>
-          </div>
-
-          <div class="section-sep"></div>
-
-          <div class="cancel-title" style="margin-bottom:6px">Mensaje predefinido</div>
-          <div style="background:var(--warm-white); border-radius:var(--radius-sm); padding:8px; font-size:11px; color:var(--text-b); line-height:1.5; margin-bottom:10px; border: 0.5px solid var(--sand)">
-            Hola [nombre], te avisamos que la clase de <strong>Vinyasa Flow del lunes 18:30</strong> fue cancelada. Lamentamos el inconveniente. Las clases de tu paquete no se ven afectadas. ✨
-          </div>
-
-          <div class="cancel-actions">
-            <button class="btn-secondary">Cancelar sin avisar</button>
-            <button class="btn-primary">Cancelar clase y abrir WhatsApp</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SCREEN: ALUMNA - AGENDA MOBILE -->
-<div class="screen" id="screen-alumna">
-  <div class="device-row">
-    <div>
-      <div style="font-size:11px; color:var(--text-m); margin-bottom:8px; text-align:center">Vista móvil — Alumna</div>
-      <div class="device-mobile">
-        <div style="background:var(--warm-white)">
-          <div class="mobile-header">
-            <div>
-              <div class="mobile-title">Clases disponibles</div>
-              <div class="mobile-sub">Semana del 3 de marzo</div>
-            </div>
-            <i class="ti ti-bell" aria-hidden="true" style="font-size:16px; color:var(--text-m)"></i>
-          </div>
-          <div class="mobile-content">
-            <div class="mobile-section-label">Esta semana</div>
-
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Hatha Flow</div>
-                <div class="meta">Lun 09:00 · Laura · 4 libres</div>
-              </div>
-              <button class="btn-reserve">Reservar</button>
-            </div>
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Vinyasa Flow</div>
-                <div class="meta">Lun 18:30 · Laura · <span style="color:#8a5040">Completa</span></div>
-              </div>
-              <button class="btn-reserve full">Lista espera</button>
-            </div>
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Restaurativa</div>
-                <div class="meta">Mar 09:00 · Sofía · 5 libres</div>
-              </div>
-              <button class="btn-reserve">Reservar</button>
-            </div>
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Vinyasa Flow</div>
-                <div class="meta">Jue 18:30 · Laura · 1 libre</div>
-              </div>
-              <button class="btn-reserve">Reservar</button>
-            </div>
-
-            <div style="background:var(--warm-white); border:0.5px solid var(--sand); border-radius:var(--radius-md); padding:10px; margin-top:10px; display:flex; align-items:center; justify-content:space-between;">
-              <div>
-                <div style="font-size:11px; font-weight:500; color:var(--text-h)">Tu paquete</div>
-                <div style="font-size:10px; color:var(--text-m)">6 clases disponibles</div>
-              </div>
-              <div style="font-size:22px; font-weight:500; color:var(--text-h)">6</div>
-            </div>
-          </div>
-          <div class="mobile-nav-bar">
-            <div class="mobile-nav-item active"><i class="ti ti-calendar"></i>Agenda</div>
-            <div class="mobile-nav-item"><i class="ti ti-bookmark"></i>Mis reservas</div>
-            <div class="mobile-nav-item"><i class="ti ti-package"></i>Paquete</div>
-            <div class="mobile-nav-item"><i class="ti ti-bell"></i>Avisos</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div style="font-size:11px; color:var(--text-m); margin-bottom:8px; text-align:center">Mis reservas</div>
-      <div class="device-mobile">
-        <div style="background:var(--warm-white)">
-          <div class="mobile-header">
-            <div>
-              <div class="mobile-title">Mis reservas</div>
-              <div class="mobile-sub">María González</div>
-            </div>
-          </div>
-          <div class="mobile-content">
-            <div class="mobile-section-label">Próximas</div>
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Hatha Flow</div>
-                <div class="meta">Jue 09:00 · Laura</div>
-              </div>
-              <span class="chip chip-confirmed">Confirmada</span>
-            </div>
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Vinyasa Flow</div>
-                <div class="meta">Vie 18:30 · Laura</div>
-              </div>
-              <span class="chip chip-waiting">En espera</span>
-            </div>
-
-            <div class="mobile-section-label" style="margin-top:12px">Anteriores</div>
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Restaurativa</div>
-                <div class="meta">Mar 09:00 · Sofía</div>
-              </div>
-              <span class="chip" style="background:#eef1ec;color:var(--olive)">Asistió</span>
-            </div>
-            <div class="mobile-class-card">
-              <div class="mobile-class-info">
-                <div class="name">Hatha Flow</div>
-                <div class="meta">Lun 09:00 · Laura</div>
-              </div>
-              <span class="chip chip-cancelled">Ausente</span>
-            </div>
-          </div>
-          <div class="mobile-nav-bar">
-            <div class="mobile-nav-item"><i class="ti ti-calendar"></i>Agenda</div>
-            <div class="mobile-nav-item active"><i class="ti ti-bookmark"></i>Mis reservas</div>
-            <div class="mobile-nav-item"><i class="ti ti-package"></i>Paquete</div>
-            <div class="mobile-nav-item"><i class="ti ti-bell"></i>Avisos</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SCREEN: PAQUETE MOBILE -->
-<div class="screen" id="screen-paquete">
-  <div style="display:flex; justify-content:center;">
-    <div>
-      <div style="font-size:11px; color:var(--text-m); margin-bottom:8px; text-align:center">Mi paquete — vista alumna</div>
-      <div class="device-mobile">
-        <div style="background:var(--warm-white)">
-          <div class="mobile-header">
-            <div>
-              <div class="mobile-title">Mi paquete</div>
-              <div class="mobile-sub">María González</div>
-            </div>
-          </div>
-          <div class="mobile-content">
-            <div class="pkg-hero">
-              <div class="pkg-hero-num">6</div>
-              <div class="pkg-hero-label">clases disponibles</div>
-              <div class="pkg-hero-row">
-                <div class="pkg-hero-item"><span>10</span><small>compradas</small></div>
-                <div class="pkg-hero-item"><span>4</span><small>usadas</small></div>
-                <div class="pkg-hero-item"><span>6</span><small>restantes</small></div>
-              </div>
-            </div>
-
-            <div class="mobile-section-label">Historial</div>
-
-            <div style="display:flex; flex-direction:column; gap:5px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; padding:7px 8px; background:var(--white); border:0.5px solid var(--sand); border-radius:var(--radius-sm);">
-                <div>
-                  <div style="font-size:11px; font-weight:500; color:var(--text-h)">Vinyasa Flow — Lun</div>
-                  <div style="font-size:10px; color:var(--text-m)">3 mar · asistencia registrada</div>
-                </div>
-                <span style="font-size:12px; color:#8a5040; font-weight:500">−1</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; align-items:center; padding:7px 8px; background:var(--white); border:0.5px solid var(--sand); border-radius:var(--radius-sm);">
-                <div>
-                  <div style="font-size:11px; font-weight:500; color:var(--text-h)">Hatha Flow — Mié</div>
-                  <div style="font-size:10px; color:var(--text-m)">1 mar · asistencia registrada</div>
-                </div>
-                <span style="font-size:12px; color:#8a5040; font-weight:500">−1</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; align-items:center; padding:7px 8px; background:var(--white); border:0.5px solid var(--sand); border-radius:var(--radius-sm);">
-                <div>
-                  <div style="font-size:11px; font-weight:500; color:var(--text-h)">Paquete activado</div>
-                  <div style="font-size:10px; color:var(--text-m)">24 feb · 10 clases</div>
-                </div>
-                <span style="font-size:12px; color:var(--olive); font-weight:500">+10</span>
-              </div>
-            </div>
-          </div>
-          <div class="mobile-nav-bar">
-            <div class="mobile-nav-item"><i class="ti ti-calendar"></i>Agenda</div>
-            <div class="mobile-nav-item"><i class="ti ti-bookmark"></i>Mis reservas</div>
-            <div class="mobile-nav-item active"><i class="ti ti-package"></i>Paquete</div>
-            <div class="mobile-nav-item"><i class="ti ti-bell"></i>Avisos</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
- </details>
 
 <script>
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "yoga-studio-class-booking-v1";
+  const STORAGE_KEY = "yoga-studio-class-booking-v2";
   const SEED_VERSION = 1;
-  const SEED_TIMESTAMP = "2030-06-01T12:00:00.000Z";
+  const SEED_TIMESTAMP = new Date().toISOString();
+  const slot = (days, hour) => { const x = new Date(); x.setDate(x.getDate() + days); x.setHours(hour, 0, 0, 0);
+    const p = (n) => String(n).padStart(2, "0");
+    return `${x.getFullYear()}-${p(x.getMonth() + 1)}-${p(x.getDate())}T${p(hour)}:00`; };
   const people = [
     { id: "admin-andrea", name: "Andrea", role: "admin", label: "Administradora · Andrea" },
     { id: "instructor-laura", name: "Laura", role: "instructor", label: "Instructora · Laura" },
@@ -3804,9 +3378,9 @@ tr:last-child td { border-bottom: none; }
     { id: "student-brisa", name: "Brisa", role: "student", label: "Alumna · Brisa" },
     { id: "student-celia", name: "Celia", role: "student", label: "Alumna · Celia" },
     { id: "student-dalia", name: "Dalia", role: "student", label: "Alumna · Dalia" },
-    { id: "student-01", name: "Estudiante 01", role: "student", label: "Alumna · Estudiante 01" },
-    { id: "student-02", name: "Estudiante 02", role: "student", label: "Alumna · Estudiante 02" },
-    { id: "student-03", name: "Estudiante 03", role: "student", label: "Alumna · Estudiante 03" }
+    { id: "student-01", name: "Lucía", role: "student", label: "Alumna · Lucía" },
+    { id: "student-02", name: "Julieta", role: "student", label: "Alumna · Julieta" },
+    { id: "student-03", name: "Renata", role: "student", label: "Alumna · Renata" }
   ];
   const content = document.getElementById("booking-content");
   const feedback = document.getElementById("booking-feedback");
@@ -3839,8 +3413,11 @@ tr:last-child td { border-bottom: none; }
       policy: { deadlineHours: null, lateCancellation: "", absence: "" },
       students: people.filter((item) => item.role === "student").map(({ id, name }) => ({ id, name })),
       classes: [
-        { id: "class-open", name: "Hatha Flow", instructorId: "instructor-laura", startsAt: "2030-06-04T18:00", capacity: 12 },
-        { id: "class-small", name: "Vinyasa Flow", instructorId: "instructor-laura", startsAt: "2030-06-04T18:00", capacity: 3 }
+        { id: "class-open", name: "Hatha Flow", instructorId: "instructor-laura", startsAt: slot(2, 18), capacity: 12 },
+        { id: "class-small", name: "Vinyasa Flow", instructorId: "instructor-laura", startsAt: slot(2, 18), capacity: 3 },
+        { id: "class-yin", name: "Yin Yoga", instructorId: "instructor-sofia", startsAt: slot(1, 10), capacity: 10 },
+        { id: "class-rest", name: "Restaurativa", instructorId: "instructor-sofia", startsAt: slot(3, 12), capacity: 10 },
+        { id: "class-flow", name: "Vinyasa Flow", instructorId: "instructor-laura", startsAt: slot(4, 19), capacity: 12 }
       ],
       reservations: [],
       waitlist: [],
@@ -4224,10 +3801,10 @@ tr:last-child td { border-bottom: none; }
         reservation.status === "confirmed");
       const activeWait = source.waitlist.find((entry) =>
         entry.studentId === activePerson.id && entry.classId === item.id && entry.status === "waiting");
-      if (activeReservation) action = '<span class="booking-status">Ya tenés una reserva confirmada</span>';
+      if (activeReservation) action = '<span class="booking-status">¡Tu lugar está reservado!</span>';
       else if (activeWait) action = `<span class="booking-status waiting">En espera · posición ${waitingPosition(source, activeWait)}</span>`;
-      else if (counts.available === 0) action = `<button class="primary" data-action="book" data-class="${esc(item.id)}">Solicitar reserva</button><button data-action="waitlist" data-class="${esc(item.id)}">Unirme a la lista de espera</button>`;
-      else action = `<button class="primary" data-action="book" data-class="${esc(item.id)}">Reservar esta clase</button>`;
+      else if (counts.available === 0) action = `<button class="primary" data-action="book" data-class="${esc(item.id)}">Quiero ir</button><button data-action="waitlist" data-class="${esc(item.id)}">Anotarme por si se libera un lugar</button>`;
+      else action = `<button class="primary" data-action="book" data-class="${esc(item.id)}">Quiero ir</button>`;
     } else if (activePerson.role === "admin" && counts.available === 0) {
       const options = source.students.map((student) =>
         `<option value="${esc(student.id)}">${esc(student.name)}</option>`).join("");
@@ -4416,7 +3993,7 @@ tr:last-child td { border-bottom: none; }
     const waitRows = activeWaitlist.length ? activeWaitlist.map(({ item, entry }) => {
       const student = person(entry.studentId);
       return `<article class="booking-dashboard-wait">
-        <div><strong>${esc(student ? student.name : "Estudiante")}</strong><p>${esc(item.name)} · ${esc(formattedDate(item.startsAt))}</p></div>
+        <div><strong>${esc(student ? student.name : "Una persona")}</strong><p>${esc(item.name)} · ${esc(formattedDate(item.startsAt))}</p></div>
         <span class="booking-dashboard-position">Posición ${waitingPosition(source, entry)}</span>
       </article>`;
     }).join("") : '<div class="booking-dashboard-empty">No hay personas en lista de espera para este período.</div>';
@@ -4430,7 +4007,7 @@ tr:last-child td { border-bottom: none; }
       const student = person(movement.studentId);
       const item = classById(source, movement.classId);
       return `<article class="booking-dashboard-movement">
-        <strong>${esc(student ? student.name : "Estudiante")} · ${esc(movementLabels[movement.type] || movement.type)}</strong>
+        <strong>${esc(student ? student.name : "Una persona")} · ${esc(movementLabels[movement.type] || movement.type)}</strong>
         <time datetime="${esc(movement.createdAt)}">${esc(formattedDate(movement.createdAt))}</time>
         <p>${movement.amount} ${movement.amount === 1 ? "crédito" : "créditos"} · ${esc(movement.operation)} · ${esc(item ? item.name : "Crédito inicial / paquete")}</p>
       </article>`;
@@ -4530,6 +4107,32 @@ tr:last-child td { border-bottom: none; }
     <div class="booking-section booking-panel"><h3>Agregar estudiante a una lista de espera llena</h3><p class="booking-help">Herramienta de demostración para preparar escenarios; no reserva ni consume créditos.</p><div class="booking-inline"><label class="booking-field"><span class="booking-label" for="admin-wait-class">Clase llena</span><select id="admin-wait-class">${classOptions}</select></label><label class="booking-field"><span class="booking-label" for="admin-wait-student">Alumna ficticia</span><select id="admin-wait-student">${source.students.map((student) => `<option value="${esc(student.id)}">${esc(student.name)}</option>`).join("")}</select></label><button data-action="admin-waitlist-form">Agregar a espera</button></div></div>`;
   }
 
+  function renderHome(source, who) {
+    const now = currentTime(source);
+    const upcoming = source.classes.filter((c) => new Date(c.startsAt) >= now)
+      .sort((a, b) => new Date(a.startsAt) - new Date(b.startsAt));
+    const next = upcoming[0];
+    const hour = now.getHours();
+    const hello = hour < 12 ? "Buen día" : hour < 20 ? "Buenas tardes" : "Buenas noches";
+    const when = (v) => new Intl.DateTimeFormat("es-AR", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }).format(new Date(v));
+    let line = "Todavía no hay clases programadas.";
+    if (next) {
+      const c = classStatus(source, next);
+      const t = person(next.instructorId);
+      line = `Lo próximo es ${esc(next.name)} con ${esc(t ? t.name : "tu instructora")}, ${esc(when(next.startsAt))}. ${c.available ? `Quedan ${c.available} ${c.available === 1 ? "lugar" : "lugares"}.` : "Está completa."}`;
+    }
+    let extra = "";
+    if (who.role === "student") {
+      const b = balancesFor(source, who.id);
+      extra = `<p class="home-credits"><strong>${b.available}</strong> ${b.available === 1 ? "clase disponible" : "clases disponibles"}${b.reserved ? ` · ${b.reserved} ${b.reserved === 1 ? "reservada" : "reservadas"}` : ""}</p>`;
+    } else if (who.role === "admin") {
+      const full = upcoming.filter((c) => classStatus(source, c).available === 0).length;
+      const wait = source.waitlist.filter((e) => e.status === "waiting").length;
+      extra = `<p class="home-credits">${upcoming.length} próximas clases · ${full} completas · ${wait} esperando un lugar</p>`;
+    }
+    return `<section class="home"><h2>${hello}, ${esc(who.name)}</h2><p class="home-next">${line}</p>${extra}</section>`;
+  }
+
   function render() {
     const roleLabel = document.getElementById("booking-role-label");
     const resetButton = document.getElementById("booking-reset");
@@ -4563,15 +4166,19 @@ tr:last-child td { border-bottom: none; }
     const student = activePerson.role === "student" ? activePerson : null;
     const creditSummary = student ? balancesFor(state, student.id) : null;
     const sections = [];
+    sections.push(renderHome(state, activePerson));
     if (activePerson.role === "admin") sections.push(dashboardViewNavigation("bookings"));
     if (creditSummary) {
-      sections.push(`<section class="booking-section"><h2>Tu paquete de clases</h2><div class="booking-credit-grid">
+      sections.push(`<section class="booking-section"><h2>Tus clases disponibles</h2><div class="booking-credit-grid">
         <div class="booking-credit"><span>Disponibles</span><strong>${creditSummary.available}</strong></div>
         <div class="booking-credit"><span>Reservados</span><strong>${creditSummary.reserved}</strong></div>
         <div class="booking-credit"><span>Consumidos</span><strong>${creditSummary.consumed}</strong></div>
       </div></section>`);
     }
-    sections.push(`<section class="booking-section"><h2>${student ? "Clases disponibles" : "Agenda de clases"}</h2><p class="section-intro">La disponibilidad se calcula con las reservas confirmadas; la espera no ocupa un lugar.</p><div class="booking-grid">${classes.map((item) => renderClassCard(state, item, activePerson)).join("") || '<div class="booking-empty">No hay clases programadas.</div>'}</div></section>`);
+    const nowAt = currentTime(state);
+    const upcomingClasses = classes.filter((item) => new Date(item.startsAt) >= nowAt);
+    const pastClasses = classes.filter((item) => new Date(item.startsAt) < nowAt).reverse();
+    sections.push(`<section class="booking-section"><h2>${student ? "Próximas clases" : "Agenda"}</h2><div class="booking-grid">${upcomingClasses.map((item) => renderClassCard(state, item, activePerson)).join("") || '<div class="booking-empty">Todavía no hay clases por acá.</div>'}</div>${pastClasses.length ? `<details class="booking-history"><summary>Clases anteriores</summary><div class="booking-grid">${pastClasses.map((item) => renderClassCard(state, item, activePerson)).join("")}</div></details>` : ""}</section>`);
     if (activePerson.role === "admin") sections.push(renderAdmin(state));
     sections.push(`<section class="booking-section"><h2>${student ? "Tus reservas" : activePerson.role === "instructor" ? "Reservas de tus clases" : "Reservas del estudio"}</h2>${renderBookings(state, activePerson)}</section>`);
     sections.push(`<section class="booking-section"><h2>${student ? "Tu lista de espera" : "Listas de espera"}</h2>${renderWaitlists(state, activePerson)}</section>`);
@@ -4735,10 +4342,10 @@ tr:last-child td { border-bottom: none; }
       if (action === "book") {
         commit((result) => result === "waiting"
           ? "Hay una lista de espera previa; tu solicitud quedó al final sin usar un crédito."
-          : "Reserva confirmada y crédito reservado.",
+          : "¡Tu lugar está reservado!",
         (candidate) => requestPlace(candidate, activePerson.id, classId));
       } else {
-        commit("Te sumaste a la lista de espera sin usar un crédito.", (candidate) => {
+        commit("¡Listo! Si se libera un lugar, queda reservado para vos. Mientras tanto no usás ninguna clase.", (candidate) => {
           const item = classById(candidate, classId);
           if (!item) throw new Error("No se encontró la clase seleccionada.");
           if (new Date(item.startsAt) <= currentTime(candidate)) throw new Error("La clase ya comenzó; no se puede agregar a la espera.");
@@ -4777,7 +4384,7 @@ tr:last-child td { border-bottom: none; }
         render();
         return;
       }
-      commit("Reserva cancelada; se actualizó el crédito y se procesó la lista de espera.", (candidate) => cancelReservation(candidate, reservationId));
+      commit("Listo, la reserva quedó cancelada.", (candidate) => cancelReservation(candidate, reservationId));
     } else if (action === "attend" || action === "absent") {
       const reservation = state.reservations.find((item) => item.id === reservationId);
       const item = reservation && classById(state, reservation.classId);
